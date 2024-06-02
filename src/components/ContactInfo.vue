@@ -23,7 +23,6 @@
           </div>
         </div>
       </div>
-      <!-- Framåt knapp -->
       <div>
         <router-link class="btn btn-primary" to="/about"
           >Visa fler
