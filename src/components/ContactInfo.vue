@@ -1,3 +1,5 @@
+<!--ContactInfo-component-->
+
 <template>
   <main>
     <div id="wrapper-contact">
@@ -23,7 +25,9 @@
       </div>
       <!-- Framåt knapp -->
       <div>
-        <router-link class="btn btn-primary" to="/about">Framåt</router-link>
+        <router-link class="btn btn-primary" to="/about"
+          >Visa fler
+        </router-link>
       </div>
     </div>
   </main>
