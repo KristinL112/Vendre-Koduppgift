@@ -22,7 +22,9 @@
         </div>
       </div>
       <!-- Framåt knapp -->
-      <router-link class="btn btn-primary" to="/about">Framåt</router-link>
+      <div>
+        <router-link class="btn btn-primary" to="/about">Framåt</router-link>
+      </div>
     </div>
   </main>
 </template>
@@ -34,7 +36,7 @@
     data() {
       return {
         users: [],
-        showEmail: {} // To track if email is shown for each user
+        showEmail: {} // För att spåra om e-mail visas för varje användare
       }
     },
     mounted() {
@@ -43,7 +45,7 @@
         .then(response => {
           this.users = response.data.data
           this.users.forEach(user => {
-            this.$set(this.showEmail, user.id, false) // Initialize showEmail object for each user
+            this.$set(this.showEmail, user.id, false) // Initiera showEmail-objekt för varje användare
           })
         })
         .catch(error => {
@@ -52,7 +54,7 @@
     },
     methods: {
       toggleEmail(userId) {
-        this.showEmail[userId] = !this.showEmail[userId] // Toggle showEmail value
+        this.showEmail[userId] = !this.showEmail[userId] //Toggle visar email-värdet
       }
     }
   }
@@ -100,7 +102,7 @@
   }
 
   img.email-icon {
-    width: 30px; /* Ställ in en specifik bredd för email-ikonen */
+    width: 30px; /* Bredd för email-ikonen */
     height: auto; /* Justera höjden automatiskt för att behålla proportionerna */
   }
 
@@ -114,7 +116,7 @@
     background-color: rgb(190, 212, 212);
     border-color: rgb(190, 212, 212);
     color: #3e3d3d;
-    margin-right: 20px;
+    margin-right: 10px;
     border-radius: 1px;
   }
 
@@ -129,7 +131,7 @@
     }
     .user-img {
       border-radius: 50%;
-      width: 250px; /* Set a specific width for the images */
+      width: 250px; /* Bredd bilderna */
       height: auto;
       margin: 5%;
     }

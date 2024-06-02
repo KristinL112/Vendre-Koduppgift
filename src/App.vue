@@ -1,10 +1,9 @@
+<!--App.vue-->
+
 <template>
-  <!--en class "app" och en class som binder till mode är dark eller light  -->
   <div class="app">
     <header>
-      <!-- Nav -->
       <NavBar />
-
       <FooterComponent />
     </header>
   </div>

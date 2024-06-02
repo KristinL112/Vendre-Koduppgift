@@ -1,3 +1,5 @@
+<!--ContactInfo_2-component-->
+
 <template>
   <main>
     <div id="wrapper-contact">
@@ -33,7 +35,7 @@
     data() {
       return {
         users: [],
-        showEmail: {} // To track if email is shown for each user
+        showEmail: {} // För att spåra om e-mail visas för varje användare
       }
     },
     mounted() {
@@ -42,7 +44,7 @@
         .then(response => {
           this.users = response.data.data
           this.users.forEach(user => {
-            this.$set(this.showEmail, user.id, false) // Initialize showEmail object for each user
+            this.$set(this.showEmail, user.id, false) // Initiera showEmail-objekt för varje användare
           })
         })
         .catch(error => {
@@ -51,7 +53,7 @@
     },
     methods: {
       toggleEmail(userId) {
-        this.showEmail[userId] = !this.showEmail[userId] // Toggle showEmail value
+        this.showEmail[userId] = !this.showEmail[userId] // Toggle visar email-värdet
       }
     }
   }
@@ -100,7 +102,7 @@
   }
 
   img.email-icon {
-    width: 30px; /* Ställ in en specifik bredd för email-ikonen */
+    width: 30px; /* Bredd för email-ikonen */
     height: auto; /* Justera höjden automatiskt för att behålla proportionerna */
   }
 
@@ -130,7 +132,7 @@
     }
     .user-img {
       border-radius: 50%;
-      width: 250px; /* Set a specific width for the images */
+      width: 250px; /* Bredd bilderna */
       height: auto;
       margin: 5%;
     }

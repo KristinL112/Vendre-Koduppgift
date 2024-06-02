@@ -1,4 +1,6 @@
-<!--import av paket och komponenter, funktioner, vue methods -->
+<!--NAVBAR-->
+
+<!--import av RouterLink, RouterView -->
 <script setup>
   import { RouterLink, RouterView } from 'vue-router'
 </script>
@@ -86,7 +88,7 @@
 
   @media (max-width: 768px) {
     #wrapper-logo {
-      width: 120px; /* Justera storleken efter behov */
+      width: 120px;
       top: 10%;
       left: 35%;
     }
